@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 // Function to send GET request to activate endpoint
 const sendActivateRequest = async () => {
   try {
-    const response = await axios.get('http://localhost:5000/api/activate');
+    const response = await axios.get('https://render-2-s4dl.onrender.com/api/activate');
     console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
   } catch (error) {
     console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request:`, error.message);
