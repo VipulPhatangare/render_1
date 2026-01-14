@@ -11,7 +11,7 @@ const sendActivateRequest = async () => {
     const response = await axios.get('https://render-2-s4dl.onrender.com/api/activate');
     console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
   } catch (error) {
-    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request:`, error.message);
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://render-2-s4dl.onrender.com/api/activate) :`, error.message);
   }
 };
 
