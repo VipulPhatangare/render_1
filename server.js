@@ -29,7 +29,7 @@ const sendActivateRequestEngimate = async () => {
     const response = await axios.get('https://engimate-2.onrender.com/api/activate');
     console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
   } catch (error) {
-    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://engimate-2.onrender.com/api/activate) :`, error.message);
   }
 };
 
@@ -38,7 +38,7 @@ const sendActivateRequestPhoneStream = async () => {
     const response = await axios.get('https://phone-stream.onrender.com/api/activate');
     console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
   } catch (error) {
-    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://phone-stream.onrender.com/api/activate) :`, error.message);
   }
 };
 
@@ -47,7 +47,7 @@ const sendActivateRequestBadmintonTest = async () => {
     const response = await axios.get('https://badminton-test.onrender.com/api/activate');
     console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
   } catch (error) {
-    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://badminton-test.onrender.com) :`, error.message);
   }
 };
 
