@@ -24,13 +24,48 @@ const sendActivateRequestChatBot = async () => {
   }
 };
 
-// Send request immediately on startup
+const sendActivateRequestEngimate = async () => {
+  try {
+    const response = await axios.get('https://engimate-2.onrender.com/api/activate');
+    console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
+  } catch (error) {
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+  }
+};
+
+const sendActivateRequestPhoneStream = async () => {
+  try {
+    const response = await axios.get('https://phone-stream.onrender.com/api/activate');
+    console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
+  } catch (error) {
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+  }
+};
+
+const sendActivateRequestBadmintonTest = async () => {
+  try {
+    const response = await axios.get('https://badminton-test.onrender.com/api/activate');
+    console.log(`[${new Date().toLocaleTimeString()}] Activate request sent - Status: ${response.status}`);
+  } catch (error) {
+    console.error(`[${new Date().toLocaleTimeString()}] Error sending activate request (https://vipul-chatbot.onrender.com/api/activate) :`, error.message);
+  }
+};
+
+
+
+// Send request immediately on startup  
 sendActivateRequest();
 sendActivateRequestChatBot();
+sendActivateRequestEngimate();
+sendActivateRequestPhoneStream();
+sendActivateRequestBadmintonTest();
 
 // Set up interval to send request every 5 minutes (300000 milliseconds)
 setInterval(sendActivateRequest, 5 * 60 * 1000);
 setInterval(sendActivateRequestChatBot, 5 * 60 * 1000);
+setInterval(sendActivateRequestEngimate, 5 * 60 * 1000);
+setInterval(sendActivateRequestPhoneStream, 5 * 60 * 1000);
+setInterval(sendActivateRequestBadmintonTest, 5 * 60 * 1000);
 console.log('Automatic activation requests scheduled every 5 minutes');
 
 // Serve static files from the 'public' directory
